@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,8 +50,7 @@
         .subtitle-zh { font-size: 1.3rem; color: #2c3e50; margin-bottom: 1rem; letter-spacing: 1px;}
         .tagline, .tagline-zh { font-style: italic; font-size: 1.2rem; color: #7f8c8d; margin-top: 1rem;}
         .hero-section { background: rgba(255,255,255,0.97); padding: 3rem 0; border-radius: 15px; margin: -2rem auto 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1);}
-        .coming-soon { background: #f39c12; color: white; padding: 1rem; text-align: center; border-radius: 10px; margin: 2rem 0; font-size: 1.1rem; font-weight: bold;}
-        .coming-soon-zh { background: #f39c12; color: white; padding: 1rem; text-align: center; border-radius: 10px; margin: 2rem 0; font-size: 1.1rem; font-weight: bold;}
+        .coming-soon, .coming-soon-zh { background: #f39c12; color: white; padding: 1rem; text-align: center; border-radius: 10px; margin: 2rem 0; font-size: 1.1rem; font-weight: bold;}
         .why-choose h2, .why-choose h2.zh { font-size: 2.5rem; color: #2c3e50; margin-bottom: 1rem; text-align: center;}
         .lead-text, .lead-text-zh { font-size: 1.3rem; color: #34495e; text-align: center; margin-bottom: 2rem; font-weight: 500;}
         .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 2rem 0; }
@@ -64,9 +64,8 @@
         .contact-item:hover, .contact-item:focus { transform: translateY(-3px); outline: 2px solid #f4a6cd; }
         .contact-icon { width: 30px; height: 30px; margin-right: 1rem; background: #2c3e50; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;}
         .contact-text, .contact-text-zh { font-size: 1.1rem; color: #2c3e50; font-weight: 500;}
-        .cta-button { display: inline-block; background: #e74c3c; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-size: 1.2rem; font-weight: bold; margin-top: 1rem; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px;}
-        .cta-button:hover, .cta-button:focus { background: #c0392b; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(231,76,60,0.3); outline: 2px solid #e74c3c;}
-        .cta-button-zh { display: inline-block; background: #e74c3c; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-size: 1.2rem; font-weight: bold; margin-top: 1rem; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px;}
+        .cta-button, .cta-button-zh { display: inline-block; background: #e74c3c; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-size: 1.2rem; font-weight: bold; margin-top: 1rem; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px;}
+        .cta-button:hover, .cta-button:focus,
         .cta-button-zh:hover, .cta-button-zh:focus { background: #c0392b; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(231,76,60,0.3); outline: 2px solid #e74c3c;}
         footer { background: #2c3e50; color: white; text-align: center; padding: 2rem 0;}
         .footer-zh { font-size: 1rem; }
@@ -79,7 +78,6 @@
             .contact-info { flex-direction: column; align-items: center; gap: 1rem; }
             .lang-switch { right: 1rem; top: 1rem; }
         }
-        /* Hide all .zh by default, show when body.zh. Hide .en when body.zh */
         .zh { display: none; }
         body.zh .en { display: none !important; }
         body.zh .zh { display: block !important; }
@@ -208,21 +206,27 @@
         </div>
     </footer>
     <script>
-        // Language switch logic
+        // Language switch logic with auto-detect and remember
         const btnEn = document.getElementById('lang-en');
         const btnZh = document.getElementById('lang-zh');
         function setLang(lang) {
             document.body.classList.toggle('zh', lang === 'zh');
             btnEn.classList.toggle('active', lang === 'en');
             btnZh.classList.toggle('active', lang === 'zh');
+            localStorage.setItem('lang', lang);
         }
         btnEn.addEventListener('click', () => setLang('en'));
         btnZh.addEventListener('click', () => setLang('zh'));
-        // Optional: Auto-detect browser language on first load
-        if (!document.body.classList.contains('zh')) {
-            const userLang = navigator.language || navigator.userLanguage;
-            if (userLang && userLang.startsWith('zh')) setLang('zh');
-        }
+        // On page load: restore or auto-detect
+        (function(){
+            const savedLang = localStorage.getItem('lang');
+            if (savedLang) {
+                setLang(savedLang);
+            } else {
+                const userLang = navigator.language || navigator.userLanguage || '';
+                setLang(userLang.startsWith('zh') ? 'zh' : 'en');
+            }
+        })();
     </script>
 </body>
-</html>
+</html>       
