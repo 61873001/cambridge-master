@@ -3,284 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cambridge Master Professional Tutoring | Expert Academic Guidance</title>
-    <meta name="description" content="Cambridge-qualified accountant offering professional tutoring in DSE, IB, GCE, IGCSE, BAFS, Economics, and Business Studies. Over 10 years proven success.">
+    <title>Cambridge Master Professional Tutoring | 劍橋碩士專業補習</title>
+    <meta name="description" content="Cambridge-qualified accountant offering professional tutoring in DSE, IB, GCE, IGCSE, BAFS, Economics, and Business Studies. Over 10 years proven success. 劍橋會計師主理、十年以上專業補習經驗，DSE/IB/GCE/IGCSE會計、經濟、商業、個人陳述等。">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Georgia', 'Noto Sans TC', 'Noto Sans SC', 'PingFang TC', 'Microsoft JhengHei', serif;
             line-height: 1.6;
             color: #2c3e50;
             background: linear-gradient(135deg, #faf8f5 30%, #f8f1e8 100%);
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+        .lang-switch {
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+            z-index: 10;
         }
+        .lang-switch button {
+            background: #fff;
+            border: 1px solid #f4a6cd;
+            color: #2c3e50;
+            border-radius: 6px;
+            padding: 0.4em 1.2em;
+            margin-left: 0.5em;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .lang-switch button.active,
+        .lang-switch button:hover {
+            background: #f4a6cd;
+            color: #fff;
+            border-color: #e74c3c;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         header {
             background: linear-gradient(135deg, #f8f1e8 0%, #f0e6d6 100%);
             padding: 2rem 0;
             text-align: center;
             position: relative;
         }
-        .graduation-cap {
-            display: inline-block;
-            font-size: 3rem;
-            margin-right: 1rem;
-            color: #2c3e50;
-        }
-        h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .subtitle {
-            font-size: 1.5rem;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .tagline {
-            font-style: italic;
-            font-size: 1.2rem;
-            color: #7f8c8d;
-            margin-top: 1rem;
-        }
-        .hero-section {
-            background: rgba(255,255,255,0.97);
-            padding: 3rem 0;
-            border-radius: 15px;
-            margin: -2rem auto 3rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        .coming-soon {
-            background: #f39c12;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            border-radius: 10px;
-            margin: 2rem 0;
-            font-size: 1.1rem;
-            font-weight: bold;
-        }
-        .why-choose h2 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-        .lead-text {
-            font-size: 1.3rem;
-            color: #34495e;
-            text-align: center;
-            margin-bottom: 2rem;
-            font-weight: 500;
-        }
-        .features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .feature {
-            display: flex;
-            align-items: flex-start;
-            padding: 1rem;
-            background: #fdfcfb;
-            border-radius: 10px;
-            border-left: 5px solid #f4a6cd;
-        }
-        .checkmark {
-            color: #27ae60;
-            font-size: 1.5rem;
-            margin-right: 1rem;
-            margin-top: 0.2rem;
-            flex-shrink: 0;
-        }
-        .feature-text {
-            font-size: 1.1rem;
-            color: #2c3e50;
-            line-height: 1.6;
-        }
-        .contact-section {
-            background: linear-gradient(135deg, #f8f1e8 0%, #f0e6d6 100%);
-            padding: 3rem 0;
-            text-align: center;
-            margin: 3rem 0;
-            border-radius: 15px;
-            position: relative;
-        }
-        .contact-section h3 {
-            font-size: 2rem;
-            color: #2c3e50;
-            margin-bottom: 2rem;
-        }
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-            margin: 2rem 0;
-        }
-        .contact-item {
-            display: flex;
-            align-items: center;
-            background: white;
-            padding: 1rem 1.5rem;
-            border-radius: 50px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            text-decoration: none;
-        }
-        .contact-item:hover, .contact-item:focus {
-            transform: translateY(-3px);
-            outline: 2px solid #f4a6cd;
-        }
-        .contact-icon {
-            width: 30px;
-            height: 30px;
-            margin-right: 1rem;
-            background: #2c3e50;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.3rem;
-        }
-        .contact-text {
-            font-size: 1.1rem;
-            color: #2c3e50;
-            font-weight: 500;
-        }
-        .cta-button {
-            display: inline-block;
-            background: #e74c3c;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-top: 1rem;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .cta-button:hover, .cta-button:focus {
-            background: #c0392b;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(231,76,60,0.3);
-            outline: 2px solid #e74c3c;
-        }
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
+        .graduation-cap { display: inline-block; font-size: 3rem; margin-right: 1rem; color: #2c3e50; }
+        h1 { font-size: 3.5rem; font-weight: bold; color: #2c3e50; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;}
+        .subtitle { font-size: 1.5rem; color: #2c3e50; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .subtitle-zh { font-size: 1.3rem; color: #2c3e50; margin-bottom: 1rem; letter-spacing: 1px;}
+        .tagline, .tagline-zh { font-style: italic; font-size: 1.2rem; color: #7f8c8d; margin-top: 1rem;}
+        .hero-section { background: rgba(255,255,255,0.97); padding: 3rem 0; border-radius: 15px; margin: -2rem auto 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1);}
+        .coming-soon { background: #f39c12; color: white; padding: 1rem; text-align: center; border-radius: 10px; margin: 2rem 0; font-size: 1.1rem; font-weight: bold;}
+        .coming-soon-zh { background: #f39c12; color: white; padding: 1rem; text-align: center; border-radius: 10px; margin: 2rem 0; font-size: 1.1rem; font-weight: bold;}
+        .why-choose h2, .why-choose h2.zh { font-size: 2.5rem; color: #2c3e50; margin-bottom: 1rem; text-align: center;}
+        .lead-text, .lead-text-zh { font-size: 1.3rem; color: #34495e; text-align: center; margin-bottom: 2rem; font-weight: 500;}
+        .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 2rem 0; }
+        .feature { display: flex; align-items: flex-start; padding: 1rem; background: #fdfcfb; border-radius: 10px; border-left: 5px solid #f4a6cd; }
+        .checkmark { color: #27ae60; font-size: 1.5rem; margin-right: 1rem; margin-top: 0.2rem; flex-shrink: 0; }
+        .feature-text, .feature-text-zh { font-size: 1.1rem; color: #2c3e50; line-height: 1.6; }
+        .contact-section { background: linear-gradient(135deg, #f8f1e8 0%, #f0e6d6 100%); padding: 3rem 0; text-align: center; margin: 3rem 0; border-radius: 15px; position: relative;}
+        .contact-section h3, .contact-section h3.zh { font-size: 2rem; color: #2c3e50; margin-bottom: 2rem;}
+        .contact-info { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin: 2rem 0;}
+        .contact-item { display: flex; align-items: center; background: white; padding: 1rem 1.5rem; border-radius: 50px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; text-decoration: none;}
+        .contact-item:hover, .contact-item:focus { transform: translateY(-3px); outline: 2px solid #f4a6cd; }
+        .contact-icon { width: 30px; height: 30px; margin-right: 1rem; background: #2c3e50; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;}
+        .contact-text, .contact-text-zh { font-size: 1.1rem; color: #2c3e50; font-weight: 500;}
+        .cta-button { display: inline-block; background: #e74c3c; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-size: 1.2rem; font-weight: bold; margin-top: 1rem; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px;}
+        .cta-button:hover, .cta-button:focus { background: #c0392b; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(231,76,60,0.3); outline: 2px solid #e74c3c;}
+        .cta-button-zh { display: inline-block; background: #e74c3c; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-size: 1.2rem; font-weight: bold; margin-top: 1rem; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px;}
+        .cta-button-zh:hover, .cta-button-zh:focus { background: #c0392b; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(231,76,60,0.3); outline: 2px solid #e74c3c;}
+        footer { background: #2c3e50; color: white; text-align: center; padding: 2rem 0;}
+        .footer-zh { font-size: 1rem; }
         @media (max-width: 900px) {
-            .features {
-                grid-template-columns: 1fr;
-            }
+            .features { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            .subtitle {
-                font-size: 1.2rem;
-            }
-            .contact-info {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
+            h1 { font-size: 2.5rem; }
+            .subtitle, .subtitle-zh { font-size: 1.2rem; }
+            .contact-info { flex-direction: column; align-items: center; gap: 1rem; }
+            .lang-switch { right: 1rem; top: 1rem; }
         }
+        /* Hide all .zh by default, show when body.zh. Hide .en when body.zh */
+        .zh { display: none; }
+        body.zh .en { display: none !important; }
+        body.zh .zh { display: block !important; }
     </style>
 </head>
 <body>
+    <div class="lang-switch">
+        <button id="lang-en" class="active">English</button>
+        <button id="lang-zh">中文</button>
+    </div>
     <header>
         <div class="container">
             <span class="graduation-cap" aria-hidden="true">🎓</span>
-            <h1>Cambridge Master</h1>
-            <p class="subtitle">Professional Tutoring</p>
-            <p class="tagline">From classroom to career—your success starts here</p>
+            <h1 class="en">Cambridge Master</h1>
+            <h1 class="zh">劍橋碩士專業補習</h1>
+            <p class="subtitle en">Professional Tutoring</p>
+            <p class="subtitle-zh zh">專業一對一／小組補習</p>
+            <p class="tagline en">From classroom to career—your success starts here</p>
+            <p class="tagline-zh zh">由課堂到職場，助你邁向成功之路</p>
         </div>
     </header>
     <main>
         <div class="container">
             <section class="hero-section">
-                <div class="coming-soon" role="status">
+                <div class="coming-soon en" role="status">
                     📹 Promotional Video Coming Soon! Stay tuned for our expert introduction.
                 </div>
+                <div class="coming-soon-zh zh" role="status">
+                    📹 宣傳短片即將推出！請密切留意我們的專業介紹。
+                </div>
                 <div class="why-choose">
-                    <h2>Why Choose Us?</h2>
-                    <p class="lead-text">Led by qualified accountants and experienced secondary school teachers</p>
+                    <h2 class="en">Why Choose Us?</h2>
+                    <h2 class="zh">為什麼選擇我們？</h2>
+                    <p class="lead-text en">Led by qualified accountants and experienced secondary school teachers</p>
+                    <p class="lead-text-zh zh">由合資格會計師及資深中學導師主理</p>
                 </div>
                 <div class="features">
                     <div class="feature">
                         <span class="checkmark" aria-hidden="true">✓</span>
-                        <div class="feature-text">
+                        <div class="feature-text en">
                             <strong>Over 10 years of proven success</strong> in academic and professional tutoring
                         </div>
+                        <div class="feature-text-zh zh">
+                            <strong>十年以上專業及學術補習經驗</strong>
+                        </div>
                     </div>
                     <div class="feature">
                         <span class="checkmark" aria-hidden="true">✓</span>
-                        <div class="feature-text">
+                        <div class="feature-text en">
                             <strong>Subjects offered:</strong> DSE / IB / GCE / IGCSE – BAFS / Economics / Business Studies / University Accounting Programs
                         </div>
+                        <div class="feature-text-zh zh">
+                            <strong>科目：</strong> DSE／IB／GCE／IGCSE – 會計、經濟、商業、BAFS、大學會計課程
+                        </div>
                     </div>
                     <div class="feature">
                         <span class="checkmark" aria-hidden="true">✓</span>
-                        <div class="feature-text">
+                        <div class="feature-text en">
                             <strong>Flexible learning options:</strong> online or in-person, individual or group sessions
                         </div>
+                        <div class="feature-text-zh zh">
+                            <strong>彈性上課方式：</strong> 網上／面授，一對一／小組皆可
+                        </div>
                     </div>
                     <div class="feature">
                         <span class="checkmark" aria-hidden="true">✓</span>
-                        <div class="feature-text">
+                        <div class="feature-text en">
                             <strong>Available 24/7 worldwide</strong> to suit your schedule
                         </div>
-                    </div>
-                    <div class="feature">
-                        <span class="checkmark" aria-hidden="true">✓</span>
-                        <div class="feature-text">
-                            <strong>Languages offered:</strong> English, Cantonese, Mandarin
+                        <div class="feature-text-zh zh">
+                            <strong>全天候支援</strong>，全球各地學生均可報讀
                         </div>
                     </div>
                     <div class="feature">
                         <span class="checkmark" aria-hidden="true">✓</span>
-                        <div class="feature-text">
+                        <div class="feature-text en">
+                            <strong>Languages offered:</strong> English, Cantonese, Mandarin
+                        </div>
+                        <div class="feature-text-zh zh">
+                            <strong>授課語言：</strong> 廣東話、英語、普通話
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <span class="checkmark" aria-hidden="true">✓</span>
+                        <div class="feature-text en">
                             <strong>Bonus:</strong> personal statement coaching for university admissions
+                        </div>
+                        <div class="feature-text-zh zh">
+                            <strong>附加服務：</strong> 協助撰寫個人陳述、升學輔導
                         </div>
                     </div>
                 </div>
             </section>
             <section class="contact-section">
                 <div class="container">
-                    <h3>To book consultation, please contact us by</h3>
+                    <h3 class="en">To book consultation, please contact us by</h3>
+                    <h3 class="zh">預約免費諮詢，歡迎聯絡我們：</h3>
                     <div class="contact-info">
                         <a class="contact-item" href="https://wa.me/85261873001" target="_blank" rel="noopener" aria-label="Contact WhatsApp">
                             <span class="contact-icon" aria-hidden="true">📱</span>
-                            <span class="contact-text">WhatsApp: +852 6187-3001</span>
+                            <span class="contact-text en">WhatsApp: +852 6187-3001</span>
+                            <span class="contact-text-zh zh">WhatsApp：+852 6187-3001</span>
                         </a>
                         <a class="contact-item" href="mailto:cambridge.master.tutoring@gmail.com" aria-label="Contact Email">
                             <span class="contact-icon" aria-hidden="true">📧</span>
-                            <span class="contact-text">cambridge.master.tutoring@gmail.com</span>
+                            <span class="contact-text en">cambridge.master.tutoring@gmail.com</span>
+                            <span class="contact-text-zh zh">cambridge.master.tutoring@gmail.com</span>
                         </a>
                     </div>
-                    <a href="https://wa.me/85261873001" class="cta-button" target="_blank" rel="noopener">
+                    <a href="https://wa.me/85261873001" class="cta-button en" target="_blank" rel="noopener">
                         Book your free consultation
+                    </a>
+                    <a href="https://wa.me/85261873001" class="cta-button-zh zh" target="_blank" rel="noopener">
+                        預約免費諮詢
                     </a>
                 </div>
             </section>
@@ -288,9 +201,28 @@
     </main>
     <footer>
         <div class="container">
-            <p>© 2025 Cambridge Master Professional Tutoring. All rights reserved.</p>
-            <p style="margin-top: 0.5rem; font-style: italic;">From classroom to career—your success starts here</p>
+            <p class="en">© 2025 Cambridge Master Professional Tutoring. All rights reserved.</p>
+            <p class="footer-zh zh">© 2025 劍橋碩士專業補習。版權所有。</p>
+            <p class="en" style="margin-top: 0.5rem; font-style: italic;">From classroom to career—your success starts here</p>
+            <p class="footer-zh zh" style="margin-top: 0.5rem; font-style: italic;">由課堂到職場，助你邁向成功之路</p>
         </div>
     </footer>
+    <script>
+        // Language switch logic
+        const btnEn = document.getElementById('lang-en');
+        const btnZh = document.getElementById('lang-zh');
+        function setLang(lang) {
+            document.body.classList.toggle('zh', lang === 'zh');
+            btnEn.classList.toggle('active', lang === 'en');
+            btnZh.classList.toggle('active', lang === 'zh');
+        }
+        btnEn.addEventListener('click', () => setLang('en'));
+        btnZh.addEventListener('click', () => setLang('zh'));
+        // Optional: Auto-detect browser language on first load
+        if (!document.body.classList.contains('zh')) {
+            const userLang = navigator.language || navigator.userLanguage;
+            if (userLang && userLang.startsWith('zh')) setLang('zh');
+        }
+    </script>
 </body>
 </html>
