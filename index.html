@@ -1,4 +1,4 @@
-xml
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -166,28 +166,3 @@ xml
   <noscript><div style="display:none;"><p>This website requires JavaScript for optimal functionality.</p></div></noscript>
 </body>
 </html>
-Auxiliary Configuration Files
-1. robots.txt (root directory)
-
-text
-User-agent: *
-Disallow: /admin/
-Disallow: /backup/
-Disallow: /.git/
-Allow: /
-
-Sitemap: https://yourdomain.com/sitemap.xml
-2. site.webmanifest (root directory)
-
-json
-{
-  "name": "Cambridge Master Tutoring",
-  "short_name": "CambridgeMaster",
-  "icons": [
-    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
-  ],
-  "theme_color": "#2c3e50",
-  "background_color": "#faf8f5",
-  "display": "standalone"
-}
